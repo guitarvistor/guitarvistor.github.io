@@ -1,10 +1,29 @@
+"use client";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import CascadingText from '@/components/CascadingText';
 import { FiArrowRight, FiDatabase, FiCode, FiBriefcase } from 'react-icons/fi';
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function Home() {
+  const [state, handleSubmit] = useForm("YOUR_FORM_ID"); // hay que poner el ID de Formspree!!!!!!
+
+  if (state.succeeded) {
+    return (
+      <div className="bg-background font-sans min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-grow flex items-center justify-center px-8">
+          <div className="text-center bg-white p-12 rounded-lg shadow-xl">
+            <h1 className="text-3xl font-bold text-text-primary mb-4">¡Mensaje Enviado!</h1>
+            <p className="text-text-secondary text-lg">Gracias por contactarnos, nos pondremos en contacto contigo a la brevedad.</p>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
   return (
     <div className="bg-background font-sans">
       <Header />
@@ -24,7 +43,7 @@ export default function Home() {
               <CascadingText text="Código Inteligente. Datos Precisos." className="text-7xl font-bold mb-4 text-accent [text-shadow:2px_2px_4px_rgba(0,0,0,0.3)]" />
               <p className="text-4xl mb-8 text-accent">Creamos aplicaciones robustas y extraemos valor oculto de tu información.</p>
               <div className="flex justify-center space-x-4">
-                <a href="/registro" className="bg-accent text-white py-3 px-6 rounded-full hover:bg-opacity-90 transition-all">Comienza ahora</a>
+                <a href="/blog" className="bg-accent text-white py-3 px-6 rounded-full hover:bg-opacity-90 transition-all">Ir al Blog</a>
                 <a href="https://www.youtube.com/watch?v=KJG0maOX1ys&list=RDKJG0maOX1ys&start_radio=1" target="_blank" rel="noopener noreferrer" className="bg-gray-200 text-gray-800 py-3 px-6 rounded-full hover:bg-accent hover:text-white transition-all">Mira un demo</a>
               </div>
             </div>
@@ -74,29 +93,83 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contact Section (falta configurar formspree, da hasta 50 mensajes gratis al mes)*/} 
+        {/* Contact Section */}
         <AnimatedSection>
           <section id="contact" className="py-20">
             <h2 className="text-4xl font-bold text-center text-accent mb-12">Contacto</h2>
-            <div className="max-w-2xl mx-auto">
-              <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" className="bg-white p-8 rounded-lg shadow-md">
-                <div className="mb-4">
-                  <label htmlFor="name" className="block text-text-secondary mb-2">Nombre o razón social</label>
-                  <input type="text" id="name" name="name" required className="w-full p-3 border border-gray-300 rounded-lg" />
+            <div className="max-w-4xl mx-auto">
+              <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-md grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                {/* Columna Izquierda - Datos de la Empresa */}
+                <div className="md:col-span-1">
+                  <h2 className="text-2xl font-semibold text-text-primary mb-4 border-b pb-2">Datos de la Empresa</h2>
+                  <div className="mb-4">
+                    <label htmlFor="company-rut" className="block text-text-secondary mb-2">RUT de la Empresa</label>
+                    <input type="text" id="company-rut" name="company-rut" required className="w-full p-3 border border-gray-300 rounded-lg" />
+                  </div>
+                  <div className="mb-4">
+                    <label htmlFor="company-name" className="block text-text-secondary mb-2">Razón Social</label>
+                    <input type="text" id="company-name" name="company-name" required className="w-full p-3 border border-gray-300 rounded-lg" />
+                  </div>
+                  <div className="mb-4">
+                    <label htmlFor="company-email" className="block text-text-secondary mb-2">Correo Electrónico</label>
+                    <input type="email" id="company-email" name="company-email" required className="w-full p-3 border border-gray-300 rounded-lg" />
+                  </div>
+                  <div className="mb-4">
+                    <label htmlFor="company-phone" className="block text-text-secondary mb-2">Teléfono</label>
+                    <input type="tel" id="company-phone" name="company-phone" className="w-full p-3 border border-gray-300 rounded-lg" />
+                  </div>
                 </div>
-                <div className="mb-4">
-                  <label htmlFor="email" className="block text-text-secondary mb-2">Correo electrónico</label>
-                  <input type="email" id="email" name="email" required className="w-full p-3 border border-gray-300 rounded-lg" />
+
+                {/* Columna Derecha - Datos del Contacto */}
+                <div className="md:col-span-1">
+                  <h2 className="text-2xl font-semibold text-text-primary mb-4 border-b pb-2">Datos del Contacto</h2>
+                  <div className="mb-4">
+                    <label htmlFor="contact-name" className="block text-text-secondary mb-2">Nombre del Contacto</label>
+                    <input type="text" id="contact-name" name="contact-name" required className="w-full p-3 border border-gray-300 rounded-lg" />
+                  </div>
+                  <div className="mb-4">
+                    <label htmlFor="contact-rut" className="block text-text-secondary mb-2">RUT del Contacto</label>
+                    <input type="text" id="contact-rut" name="contact-rut" required className="w-full p-3 border border-gray-300 rounded-lg" />
+                  </div>
+                  <div className="mb-4">
+                    <label htmlFor="contact-email" className="block text-text-secondary mb-2">Correo Electrónico del Contacto</label>
+                    <input type="email" id="contact-email" name="contact-email" required className="w-full p-3 border border-gray-300 rounded-lg" />
+                  </div>
+                  <div className="mb-4">
+                    <label htmlFor="contact-phone" className="block text-text-secondary mb-2">Teléfono del Contacto</label>
+                    <input type="tel" id="contact-phone" name="contact-phone" className="w-full p-3 border border-gray-300 rounded-lg" />
+                  </div>
                 </div>
-                <div className="mb-4">
-                  <label htmlFor="phone" className="block text-text-secondary mb-2">Teléfono (opcional)</label>
-                  <input type="tel" id="phone" name="phone" className="w-full p-3 border border-gray-300 rounded-lg" />
+
+                {/* Fila Inferior - Producto, Mensaje y Botón */}
+                <div className="md:col-span-2">
+                  <label htmlFor="product" className="block text-text-secondary mb-2">Producto que desea usar</label>
+                  <select id="product" name="product" required className="w-full p-3 border border-gray-300 rounded-lg">
+                    <option value="">Seleccione un producto...</option>
+                    <option value="GRIMU ERP">GRIMU ERP</option>
+                    <option value="Análisis de Datos">Análisis de Datos</option>
+                    <option value="Software a medida">Software a medida</option>
+                    <option value="Consultoría Tecnológica">Consultoría Tecnológica</option>
+                  </select>
                 </div>
-                <div className="mb-4">
+
+                <div className="md:col-span-2">
                   <label htmlFor="message" className="block text-text-secondary mb-2">Mensaje</label>
                   <textarea id="message" name="message" rows={4} className="w-full p-3 border border-gray-300 rounded-lg"></textarea>
                 </div>
-                <button type="submit" className="bg-accent text-white py-3 px-6 rounded-full hover:bg-opacity-90 transition-all w-full">Enviar Mensaje</button>
+
+                <div className="md:col-span-2 text-center mt-6">
+                  <button type="submit" disabled={state.submitting} className="bg-accent text-white py-3 px-12 rounded-full hover:bg-opacity-90 transition-all w-auto text-lg">
+                    Enviar Mensaje
+                  </button>
+                  <ValidationError 
+                    prefix="Email" 
+                    field="email" 
+                    errors={state.errors}
+                    className="text-red-500 mt-2 block"
+                  />
+                </div>
               </form>
             </div>
           </section>

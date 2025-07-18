@@ -1,4 +1,4 @@
-// File: C:\Users\victo\OneDrive\Documentos\GitHub\silcon_landing\src\app\layout.tsx
+// File: C:\Users\Galaxy Book\OneDrive\Documentos\GitHub\silcon_landing\src\app\layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

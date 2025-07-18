@@ -9,6 +9,7 @@ const Header = () => {
         <ul className="flex space-x-8">
           <li><a href="#services" className="text-text-secondary hover:text-accent">Servicios</a></li>
           <li><a href="#contact" className="text-text-secondary hover:text-accent">Contacto</a></li>
+          <li><a href="/blog" className="text-text-secondary hover:text-accent">Blog</a></li>
         </ul>
       </nav>
     </header>
