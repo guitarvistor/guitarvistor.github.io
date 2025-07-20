@@ -25,7 +25,7 @@ export default function BlogEducacion() {
             </ul>
 
             <blockquote className="border-l-4 border-accent pl-4 italic text-gray-600 my-8">
-              "La ingeniería de datos no es solo para las grandes empresas tecnológicas; es una herramienta fundamental para modernizar y potenciar el sector educativo."
+              &quot;La ingeniería de datos no es solo para las grandes empresas tecnológicas; es una herramienta fundamental para modernizar y potenciar el sector educativo.&quot;
             </blockquote>
 
             <h2 className="text-2xl font-semibold text-text-primary mt-8 mb-4">Conclusión</h2>

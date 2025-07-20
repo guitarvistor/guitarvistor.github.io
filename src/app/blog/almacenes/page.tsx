@@ -25,7 +25,7 @@ export default function BlogAlmacenes() {
             </ul>
 
             <blockquote className="border-l-4 border-accent pl-4 italic text-gray-600 my-8">
-              "No necesitas ser un gigante del retail para beneficiarte de la ingeniería de datos. Las herramientas adecuadas pueden nivelar el campo de juego para los pequeños almacenes."
+              &quot;No necesitas ser un gigante del retail para beneficiarte de la ingeniería de datos. Las herramientas adecuadas pueden nivelar el campo de juego para los pequeños almacenes.&quot;
             </blockquote>
 
             <h2 className="text-2xl font-semibold text-text-primary mt-8 mb-4">Conclusión</h2>
