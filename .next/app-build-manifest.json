@@ -1,55 +1,30 @@
 {
   "pages": {
-    "/_not-found/page": [
-      "static/chunks/webpack-d238dfbd0c240c77.js",
-      "static/chunks/4bd1b696-7364e42adecd78c2.js",
-      "static/chunks/684-0dba71cbf6699cc9.js",
-      "static/chunks/main-app-0d0457cffb8bd1c1.js",
-      "static/chunks/app/_not-found/page-7f03128c501b10a3.js"
-    ],
     "/layout": [
-      "static/chunks/webpack-d238dfbd0c240c77.js",
-      "static/chunks/4bd1b696-7364e42adecd78c2.js",
-      "static/chunks/684-0dba71cbf6699cc9.js",
-      "static/chunks/main-app-0d0457cffb8bd1c1.js",
-      "static/css/1cc459a9e25cd1ad.css",
-      "static/chunks/app/layout-1e8c5e92044c33d2.js"
-    ],
-    "/blog/almacenes/page": [
-      "static/chunks/webpack-d238dfbd0c240c77.js",
-      "static/chunks/4bd1b696-7364e42adecd78c2.js",
-      "static/chunks/684-0dba71cbf6699cc9.js",
-      "static/chunks/main-app-0d0457cffb8bd1c1.js",
-      "static/chunks/992-9f0b1c2a4ef235f3.js",
-      "static/chunks/app/blog/almacenes/page-7189047911a10d5f.js"
-    ],
-    "/blog/page": [
-      "static/chunks/webpack-d238dfbd0c240c77.js",
-      "static/chunks/4bd1b696-7364e42adecd78c2.js",
-      "static/chunks/684-0dba71cbf6699cc9.js",
-      "static/chunks/main-app-0d0457cffb8bd1c1.js",
-      "static/chunks/992-9f0b1c2a4ef235f3.js",
-      "static/chunks/493-467f3d04cfa8bb41.js",
-      "static/chunks/app/blog/page-3f392b4565860aa1.js"
-    ],
-    "/blog/educacion/page": [
-      "static/chunks/webpack-d238dfbd0c240c77.js",
-      "static/chunks/4bd1b696-7364e42adecd78c2.js",
-      "static/chunks/684-0dba71cbf6699cc9.js",
-      "static/chunks/main-app-0d0457cffb8bd1c1.js",
-      "static/chunks/992-9f0b1c2a4ef235f3.js",
-      "static/chunks/app/blog/educacion/page-862eb0e0a2528e73.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
     "/page": [
-      "static/chunks/webpack-d238dfbd0c240c77.js",
-      "static/chunks/4bd1b696-7364e42adecd78c2.js",
-      "static/chunks/684-0dba71cbf6699cc9.js",
-      "static/chunks/main-app-0d0457cffb8bd1c1.js",
-      "static/chunks/ee560e2c-e74c4075f6343a18.js",
-      "static/chunks/992-9f0b1c2a4ef235f3.js",
-      "static/chunks/493-467f3d04cfa8bb41.js",
-      "static/chunks/809-fb3008ed3e5a109e.js",
-      "static/chunks/app/page-ea89f6e622351530.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
+    ],
+    "/blog/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/blog/page.js"
+    ],
+    "/blog/educacion/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/blog/educacion/page.js"
+    ],
+    "/blog/almacenes/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/blog/almacenes/page.js"
     ]
   }
 }
