@@ -40,8 +40,8 @@ export default function Home() {
             }}
           >
             <div className="py-10 px-4">
-              <CascadingText text="Código Inteligente. Datos Precisos." className="text-7xl font-bold mb-4 text-accent [text-shadow:2px_2px_4px_rgba(0,0,0,0.3)]" />
-              <p className="text-4xl mb-8 text-accent">Creamos aplicaciones robustas y extraemos valor oculto de tu información.</p>
+              <CascadingText text="Código Inteligente. Datos Precisos." className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-accent [text-shadow:2px_2px_4px_rgba(0,0,0,0.3)]" />
+              <p className="text-2xl md:text-3xl lg:text-4xl mb-8 text-accent">Creamos aplicaciones robustas y extraemos valor oculto de tu información.</p>
               <div className="flex justify-center space-x-4">
                 <a href="/blog" className="bg-accent text-white py-3 px-6 rounded-full hover:bg-opacity-90 transition-all">Ir al Blog</a>
                 <a href="https://www.youtube.com/watch?v=KJG0maOX1ys&list=RDKJG0maOX1ys&start_radio=1" target="_blank" rel="noopener noreferrer" className="bg-gray-200 text-gray-800 py-3 px-6 rounded-full hover:bg-accent hover:text-white transition-all">Mira un demo</a>
