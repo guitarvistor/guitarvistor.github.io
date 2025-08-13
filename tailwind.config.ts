@@ -18,6 +18,20 @@ const config: Config = {
         'icon-sales': '#A632A8',
         'icon-inventory': '#00B7A8',
       },
+      animation: {
+        'merge': 'merge 1.5s ease-in-out forwards',
+        'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        pulse: {
+          '0%, 100%': {
+            opacity: '1',
+          },
+          '50%': {
+            opacity: '.5',
+          },
+        },
+      },
     },
   },
   plugins: [],

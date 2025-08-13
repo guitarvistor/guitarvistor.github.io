@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import CascadingText from '@/components/CascadingText';
+import DataBrainAnimation from '@/components/DataBrainAnimation';
 import { FiArrowRight, FiDatabase, FiCode, FiBriefcase } from 'react-icons/fi';
 import { useForm, ValidationError } from '@formspree/react';
 
@@ -44,7 +45,7 @@ export default function Home() {
               <p className="text-2xl md:text-3xl lg:text-4xl mb-8 text-accent">Creamos aplicaciones robustas y extraemos valor oculto de tu información.</p>
               <div className="flex justify-center space-x-4">
                 <a href="/blog" className="bg-accent text-white py-3 px-6 rounded-full hover:bg-opacity-90 transition-all">Ir al Blog</a>
-                <a href="https://www.youtube.com/watch?v=KJG0maOX1ys&list=RDKJG0maOX1ys&start_radio=1" target="_blank" rel="noopener noreferrer" className="bg-gray-200 text-gray-800 py-3 px-6 rounded-full hover:bg-accent hover:text-white transition-all">Mira un demo</a>
+                <a href="/demo" className="bg-gray-200 text-gray-800 py-3 px-6 rounded-full hover:bg-accent hover:text-white transition-all">Mira un demo</a>
               </div>
             </div>
           </section>
@@ -93,6 +94,7 @@ export default function Home() {
           </div>
         </section>
 
+        
         {/* Contact Section */}
         <AnimatedSection>
           <section id="contact" className="py-20">

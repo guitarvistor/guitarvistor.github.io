@@ -42,7 +42,7 @@ const CascadingText: React.FC<CascadingTextProps> = ({ text, className }) => {
           ))}
           {wordIndex < words.length - 1 && (
             <motion.span custom={i++} variants={variants}>
-              {/* Using a non-breaking space */}
+              {/* usar espacio indivisible */}
               {'\u00A0'}
             </motion.span>
           )}
