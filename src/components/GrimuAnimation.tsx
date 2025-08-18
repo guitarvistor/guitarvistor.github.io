@@ -3,9 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FiFileText } from 'react-icons/fi'; // Added import
+import Image from 'next/image';
 
 const GrimuAnimation = () => {
-  const [hasMounted, setHasMounted] = useState(false);
   // Animation state machine: 'initial' -> 'visible' -> 'integrating' -> 'finished'
   const [animationState, setAnimationState] = useState('initial');
 
@@ -19,7 +19,6 @@ const GrimuAnimation = () => {
   ];
 
   useEffect(() => {
-    setHasMounted(true);
     if (animationState === 'initial') {
       // After a short delay, start the 'visible' animation
       const visibleTimer = setTimeout(() => setAnimationState('visible'), 200);
@@ -39,10 +38,6 @@ const GrimuAnimation = () => {
 
   const radius = 150;
 
-  if (!hasMounted) {
-    return null;
-  }
-
   return (
     <div className="relative w-96 h-96 flex items-center justify-center my-8">
       <motion.div
@@ -52,7 +47,7 @@ const GrimuAnimation = () => {
         }}
         transition={{ duration: 0.8 }}
       >
-        Grimu
+        <Image src="/logo_grimu.png" alt="Grimu Logo" width={120} height={120} />
       </motion.div>
 
       {sources.map((source, index) => {
@@ -87,12 +82,12 @@ const GrimuAnimation = () => {
         animate={{
             opacity: animationState === 'finished' ? 1 : 0,
             scale: animationState === 'finished' ? 1 : 0.5,
-            x: animationState === 'finished' ? 180 : 0,
+            x: animationState === 'finished' ? 160 : 0,
         }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
         <div className="w-20 h-20 bg-gray-200 rounded-lg flex flex-col items-center justify-center text-gray-800 font-bold shadow-lg text-center p-2">
-          <FiFileText className="text-6xl mb-1" />
+          <FiFileText className="text-8xl mb-1" />
           <span>Informe</span>
         </div>
       </motion.div>
