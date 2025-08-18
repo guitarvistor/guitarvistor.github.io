@@ -16,15 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/demo/page.js"
     ],
-    "/gracias/page": [
+    "/grimu/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/gracias/page.js"
-    ],
-    "/oportunidad/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/oportunidad/page.js"
+      "static/chunks/app/grimu/page.js"
     ]
   }
 }

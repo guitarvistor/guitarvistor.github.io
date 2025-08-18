@@ -9,7 +9,7 @@ export default function Demo() {
       <DataBrainAnimation />
       <h2 className="text-3xl md:text-4xl font-bold mb-8">¿Te gusta la idea?</h2>
       <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-        <Link href="/#contact" className="bg-icon-inventory text-white py-3 px-6 rounded-full hover:bg-icon-inventory/90 transition-all text-lg">
+        <Link href="/grimu" className="bg-icon-inventory text-white py-3 px-6 rounded-full hover:bg-icon-inventory/90 transition-all text-lg">
           Me encanta
         </Link>
         <Link href="/oportunidad" className="bg-icon-analytics text-white py-3 px-6 rounded-full hover:bg-icon-analytics/90 transition-all text-lg">
