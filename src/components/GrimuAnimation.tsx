@@ -2,7 +2,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FiFileText } from 'react-icons/fi'; // Added import
+import { FiFileText } from 'react-icons/fi'; // importar íconos
 import Image from 'next/image';
 
 const GrimuAnimation = () => {
@@ -20,17 +20,17 @@ const GrimuAnimation = () => {
 
   useEffect(() => {
     if (animationState === 'initial') {
-      // After a short delay, start the 'visible' animation
+      // Pequeña pausa inicial antes de comenzar la animación
       const visibleTimer = setTimeout(() => setAnimationState('visible'), 200);
       return () => clearTimeout(visibleTimer);
     }
     if (animationState === 'visible') {
-      // After all bubbles are visible, start 'integrating'
+      // Después de que los elementos sean visibles, iniciar la integración
       const integrationTimer = setTimeout(() => setAnimationState('integrating'), 3000);
       return () => clearTimeout(integrationTimer);
     }
     if (animationState === 'integrating') {
-        // After integration, move to 'finished' state for the report
+        // Después de la integración, mostrar el informe
         const finishedTimer = setTimeout(() => setAnimationState('finished'), 2000);
         return () => clearTimeout(finishedTimer);
     }

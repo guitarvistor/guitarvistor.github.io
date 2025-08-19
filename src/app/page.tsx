@@ -3,8 +3,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import CascadingText from '@/components/CascadingText';
-import DataBrainAnimation from '@/components/DataBrainAnimation';
-import { FiArrowRight, FiDatabase, FiCode, FiBriefcase } from 'react-icons/fi';
+import dynamic from 'next/dynamic';
+
+const DynamicDataBrainAnimation = dynamic(() => import('@/components/DataBrainAnimation'), { ssr: false });
+import { FiDatabase, FiCode, FiMonitor, FiHome } from 'react-icons/fi';
 import { useForm, ValidationError } from '@formspree/react';
 
 export default function Home() {
@@ -58,7 +60,7 @@ export default function Home() {
             {/* GRIMU ERP */}
             <AnimatedSection delay={0.1}>
               <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow h-full">
-                <div className="text-icon-sales text-4xl mb-4"><FiBriefcase /></div>
+                <div className="text-accent text-4xl mb-4"><FiMonitor /></div>
                 <h3 className="text-2xl font-bold text-text-primary mb-2">GRIMU ERP</h3>
                 <p className="text-text-secondary">Software de gestión diseñado para restaurantes y comercios. 
                   Controla tu operación, entiende tus números y haz crecer tu negocio fácilmente.</p>
@@ -67,8 +69,8 @@ export default function Home() {
             {/* Auditoría de Datos */}
             <AnimatedSection delay={0.2}>
               <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow h-full">
-                <div className="text-icon-analytics text-4xl mb-4"><FiDatabase /></div>
-                <h3 className="text-2xl font-bold text-text-primary mb-2">Descubre el Poder de tus Datos</h3>
+                <div className="text-accent text-4xl mb-4"><FiDatabase /></div>
+                <h3 className="text-2xl font-bold text-text-primary mb-2">Auditoría de Datos</h3>
                 <p className="text-text-secondary">Analizamos tus datos para descubrir oportunidades que potencien tu rentabilidad.
                    Recibe una hoja de ruta para tu crecimiento con insights claros y accionables.</p>
               </div>
@@ -76,7 +78,7 @@ export default function Home() {
             {/* Software a Medida */}
             <AnimatedSection delay={0.3}>
               <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow h-full">
-                <div className="text-icon-inventory text-4xl mb-4"><FiCode /></div>
+                <div className="text-accent text-4xl mb-4"><FiCode /></div>
                 <h3 className="text-2xl font-bold text-text-primary mb-2">Software a Medida</h3>
                 <p className="text-text-secondary">Diseñamos y construimos aplicaciones desde cero, pensadas exclusivamente 
                   para tu flujo de trabajo y tus metas, garantizando integración y eficiencia.</p>
@@ -85,7 +87,7 @@ export default function Home() {
             {/* Consultoría Tecnológica */}
             <AnimatedSection delay={0.4}>
               <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow h-full">
-                <div className="text-accent text-4xl mb-4"><FiArrowRight /></div>
+                <div className="text-accent text-4xl mb-4"><FiHome /></div>
                 <h3 className="text-2xl font-bold text-text-primary mb-2">Consultoría Tecnológica</h3>
                 <p className="text-text-secondary">Te guiamos para que elijas las herramientas y plataformas correctas, 
                   evitando gastos innecesarios y asegurando que tu ecosistema tecnológico trabaje para ti.</p>

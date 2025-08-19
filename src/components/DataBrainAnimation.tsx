@@ -45,7 +45,7 @@ const DataBrainAnimation = () => {
       opacity: 1,
       scale: 1,
       transition: {
-        delay: 1.0, // Wait for data blocks to merge
+        delay: 1.0, // Esperar 1 segundo antes de mostrar el bloque de información
         duration: 0.5,
         ease: "easeOut",
       },
